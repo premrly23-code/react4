@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #fdfbf9;
+  color: #1f1b18;
+  line-height: 1.6;
+}
+
+/* Layout */
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 32px;
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #a1451f;
+  cursor: pointer;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #a1451f;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #a1451f;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #863615;
+}
+
+.btn-secondary {
+  background-color: #735919;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5d4712;
+}
+
+/* Hero Section */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  color: #6a645f;
+  margin-bottom: 24px;
+}
+
+.hero-image-container {
+  height: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Featured Section */
+.featured-section {
+  padding-bottom: 60px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.view-all-link {
+  color: #a1451f;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+.cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards */
+.recipe-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.large-card { height: 380px; }
+.small-card { height: 180px; }
+
+.card-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  color: #fff;
+}
+
+.badge-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.badge-accent { background-color: #a1451f; }
+.badge-glass  { background-color: rgba(255, 255, 255, 0.3); }
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.card-meta {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* CTA Banner */
+.cta-banner {
+  background-color: #eae5dc;
+  border-radius: 20px;
+  padding: 48px 24px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cta-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cta-subtitle {
+  color: #6a645f;
+  margin-bottom: 24px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid #e5e0d8;
+  color: #6a645f;
+  font-size: 0.85rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-section,
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
